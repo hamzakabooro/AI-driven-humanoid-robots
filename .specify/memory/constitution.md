@@ -1,55 +1,40 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- SYNC IMPACT REPORT
+Version change: N/A → 1.0.0
+Modified principles: N/A (new constitution)
+Added sections: All sections (new constitution)
+Removed sections: N/A
+Templates requiring updates: N/A (initial constitution)
+Follow-up TODOs: None
+-->
+# AI-Driven Book Creation with Embedded RAG Chatbot Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Spec-first, no assumptions
+All development follows specifications first approach; No assumptions made without explicit requirements; All decisions must be traceable to spec or user requirement
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Single source of truth: Docusaurus content
+Docusaurus serves as the single source of truth for all book content; All documentation, examples, and content originate from Docusaurus; No duplicate content in multiple systems
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Zero hallucination (retrieval-only answers)
+RAG chatbot answers must be grounded in retrieved passages only; No hallucination or generation beyond provided content; Strict adherence to retrieval-augmented generation principles
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Clear, developer-friendly writing
+All book content must be clear and accessible to developers; Technical concepts explained with practical examples; Focus on usability and comprehension
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Fully reproducible setup
+Complete setup and deployment process must be reproducible; All dependencies and configurations documented; One-command setup for development environment
 
-### [PRINCIPLE_6_NAME]
+### Progressive difficulty with runnable examples
+Content organized with progressive difficulty levels; All examples must be runnable and tested; Practical implementation-focused approach
 
+## Technology Stack and Architecture Standards
+Framework: Docusaurus (Markdown); Deployment: GitHub Pages; Backend: FastAPI; Vector DB: Qdrant Cloud (Free Tier); Metadata DB: Neon Serverless Postgres; LLM: OpenAI Agents / ChatKit SDKs
 
-[PRINCIPLE__DESCRIPTION]
-
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development and Review Process
+Spec-driven development; All features must have clear acceptance criteria; Code reviews verify compliance with principles; Automated testing for all components; Documentation must be updated with each change
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
+Constitution supersedes all other practices; Amendments require documentation and approval; All PRs/reviews must verify compliance with principles; Version control follows semantic versioning; Changes must maintain backward compatibility where possible
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
-
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-18 | **Last Amended**: 2025-12-18
