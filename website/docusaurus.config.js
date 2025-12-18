@@ -8,6 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ROS 2 Robotics Education',
@@ -20,18 +21,22 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io', // Replace with your GitHub Pages URL
+  url: 'https://your-organization.github.io', // Replace with your GitHub Pages URL
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Humanoid-Robotic2/', // Adjust for your repository name
+  baseUrl: '/', // Adjust for your repository name
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-username', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Humanoid-Robotic2', // Usually your repo name.
+  organizationName: 'your-organization', // Usually your GitHub org/user name.
+  projectName: 'your-project', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -98,7 +103,7 @@ const config = {
           },
           {to: '/docs/intro', label: 'Intro', position: 'left'},
           {
-            href: 'https://github.com/your-username/Physical-AI-Humanoid-Robotic2',
+            href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -115,12 +120,16 @@ const config = {
                 to: '/docs/module-1/chapter-1-ros2-fundamentals',
               },
               {
-                label: 'Module 2: Python Agents with rclpy',
-                to: '/docs/module-1/chapter-2-python-agents-rclpy',
+                label: 'Module 2: Digital Twin Simulation',
+                to: '/docs/module-2/chapter-1-digital-twins-robotics',
               },
               {
-                label: 'Module 3: Humanoid Description with URDF',
-                to: '/docs/module-1/chapter-3-urdf-humanoid-description',
+                label: 'Module 3: AI-Robot Brain',
+                to: '/docs/module-3/chapter-1-nvidia-isaac-ai-brain',
+              },
+              {
+                label: 'Module 4: Vision-Language-Action (VLA)',
+                to: '/docs/module-4/chapter-1-vla-foundations',
               },
             ],
           },
@@ -142,7 +151,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/your-username/Physical-AI-Humanoid-Robotic2',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
